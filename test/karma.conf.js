@@ -23,6 +23,8 @@ module.exports = function(config) {
       'bower_components/ng-file-upload/ng-file-upload.js',
       'bower_components/tether/dist/js/tether.js',
       'bower_components/ngstorage/ngStorage.js',
+      'bower_components/firebase/firebase.js',
+      'bower_components/angularfire/dist/angularfire.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       // injector:js
