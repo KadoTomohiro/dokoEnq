@@ -12,7 +12,7 @@
     ])
     .controller('PersonalController', PersonalController);
 
-  PersonalController.$inject = ['Upload'];
+  PersonalController.$inject = ['Upload', 'AnswerService'];
 
   /**
    * PersonalController
@@ -20,9 +20,10 @@
    * @class PersonalController
    * @constructor
    */
-  function PersonalController(Upload) {
+  function PersonalController(Upload, AnswerService) {
     console.log('PersonalController Constructor');
     this.Upload = Upload;
+    this.AnswerService = AnswerService;
   }
 
   /**
@@ -45,6 +46,12 @@
   PersonalController.prototype.activate = function() {
     console.log('PersonalController activate Method');
     vm = this;
+
+    var tempAnswer = vm.AnswerService.tempRestore('personal');
+
+    angular.forEach(tempAnswer, function (value, key) {
+      vm[key] = value;
+    });
   };
 
   /**
@@ -67,6 +74,19 @@
   PersonalController.prototype.deactivate = function() {
     console.log('PersonalController deactivate Method');
     vm = this;
+  };
+
+  PersonalController.prototype.temporarilyStored = function() {
+    console.log('PersonalController temporarilyStored Method');
+    vm = this;
+
+    var answer = {
+      affiliation: vm.affiliation,
+      name: vm.name,
+      email: vm.email
+    };
+    
+    vm.AnswerService.tempStore('personal', answer);
   };
 
   /**

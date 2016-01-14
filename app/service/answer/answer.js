@@ -20,23 +20,24 @@
    */
   function AnswerService() {
 
-    /**
-     * My property description.  Like other pieces of your comment blocks,
-     * this can span multiple lines.
-     *
-     * @property propertyName
-     * @type {Object}
-     * @default "foo"
-     */
-    var someProperty = {};
+    var temp = {};
+
+    var tempStore = function(key, value) {
+      temp.key = value;
+      console.log(temp);
+    };
+
+    var tempRestore = function(key) {
+      return temp.key;
+    };
 
     var answerService = {
-      someMethod: function() {
-        return;
-      }
+      tempStore: tempStore,
+      tempRestore: tempRestore
     };
 
     return answerService;
+
   }
 
 })();
