@@ -24,11 +24,8 @@
     {path: '/home',    component: 'home'},
     {path: '/about',   component: 'about'},
     {path: '/contact', component: 'contact'},
-<<<<<<< HEAD
-    {path: '/personal', component: 'personal'}
-=======
+    {path: '/personal', component: 'personal'},
     {path: '/description', component: 'description'}
->>>>>>> b1c198909a0911a01f0e47798e2bcae017ac46d5
   ];
 
   AppController.$inject = [];
