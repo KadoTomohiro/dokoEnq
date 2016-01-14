@@ -13,8 +13,8 @@
       'dokoEnq.components.home',
       'dokoEnq.components.description',
       'dokoEnq.components.personal',
-      'dokoEnq.directive.enquetetitle',
       'dokoEnq.components.confirm',
+      'dokoEnq.directive.enquetetitle',
       'dokoEnq.service.answer'
     ])
     .controller('AppController', AppController);
