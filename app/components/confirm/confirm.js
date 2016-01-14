@@ -10,7 +10,9 @@
     .module('dokoEnq.components.confirm', [])
     .controller('ConfirmController', ConfirmController);
 
-  ConfirmController.$inject = [];
+  ConfirmController.$inject = [
+    'AnswerService'
+  ];
 
   /**
    * ConfirmController
@@ -18,8 +20,10 @@
    * @class ConfirmController
    * @constructor
    */
-  function ConfirmController() {
+  function ConfirmController(AnswerService) {
     console.log('ConfirmController Constructor');
+
+    this.AnswerService = AnswerService;
   }
 
   /**
@@ -65,6 +69,13 @@
     console.log('ConfirmController deactivate Method');
     vm = this;
   };
+
+  ConfirmController.prototype.store = function () {
+    console.log('ConfilmController store Method');
+    vm = this;
+
+    vm.AnswerService.store();
+  }
 
   /**
    * Angular ViewModel
