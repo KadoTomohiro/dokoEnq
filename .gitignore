@@ -1,0 +1,8 @@
+node_modules
+dist
+.tmp
+bower_components
+docs
+report
+npm-debug.log
+.DS_Store

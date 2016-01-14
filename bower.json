@@ -1,0 +1,21 @@
+{
+  "name": "dokoEnq",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~4.0.0-alpha",
+    "angular": "~v1.5.0-beta.2",
+    "angular-new-router": "~0.5.3",
+    "angular-resource": "~v1.5.0-beta.2"
+  },
+  "overrides": {
+    "angular-new-router": {
+      "main": "dist/router.es5.js"
+    },
+    "bootstrap": {
+      "main": "dist/css/bootstrap.css"
+    }
+  },
+  "devDependencies": {
+    "angular-mocks": "~v1.5.0-beta.2"
+  }
+}
