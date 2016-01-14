@@ -22,6 +22,9 @@ module.exports = function(config) {
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/ng-file-upload/ng-file-upload.js',
       'bower_components/tether/dist/js/tether.js',
+      'bower_components/ngstorage/ngStorage.js',
+      'bower_components/firebase/firebase.js',
+      'bower_components/angularfire/dist/angularfire.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       // injector:js
@@ -35,6 +38,7 @@ module.exports = function(config) {
       'app/directives/enquetetitle/enquetetitle.js',
       'app/scripts/config.js',
       'app/service/answer/answer.js',
+      'app/service/store/store.js',
       'test/components/about/about.spec.js',
       'test/components/complete/complete.spec.js',
       'test/components/confirm/confirm.spec.js',
@@ -48,6 +52,8 @@ module.exports = function(config) {
       'test/service/answer/answer.spec.js',
       'test/service/gruntfiles/gruntfiles.mock.js',
       'test/service/gruntfiles/gruntfiles.spec.js',
+      'test/service/store/store.mock.js',
+      'test/service/store/store.spec.js',
       // endinjector
       'app/scripts/main.js',
       'test/main.spec.js'

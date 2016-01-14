@@ -10,7 +10,9 @@
     .module('dokoEnq.service.answer', [])
     .factory('AnswerService', AnswerService);
 
-  AnswerService.$inject = [];
+  AnswerService.$inject = [
+    'StoreService'
+  ];
 
   /**
    * AnswerService
@@ -18,22 +20,29 @@
    * @class AnswerService
    * @constructor
    */
-  function AnswerService() {
+  function AnswerService(StoreService) {
 
     var temp = {};
 
     var tempStore = function(key, value) {
       temp.key = value;
-      console.log(temp);
     };
 
     var tempRestore = function(key) {
       return temp.key;
     };
 
+    var store = function () {
+      console.log('answerService store Methos');
+      StoreService.store(temp);
+
+      temp = {};
+    };
+
     var answerService = {
       tempStore: tempStore,
-      tempRestore: tempRestore
+      tempRestore: tempRestore,
+      store: store
     };
 
     return answerService;

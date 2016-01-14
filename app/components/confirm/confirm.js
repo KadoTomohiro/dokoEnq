@@ -74,6 +74,12 @@
   //   var tempAnswer = vm.AnswerService.tempRestore('personal');
   //   console.log(tempAnswer);
   // };
+  ConfirmController.prototype.store = function () {
+    console.log('ConfilmController store Method');
+    vm = this;
+
+    vm.AnswerService.store();
+  };
   /**
    * Angular ViewModel
    *
