@@ -26,6 +26,7 @@ module.exports = function(config) {
       // injector:js
       'app/components/about/about.js',
       'app/components/contact/contact.js',
+      'app/components/description/description.js',
       'app/components/home/home.js',
       'app/components/personal/personal.js',
       'app/directives/enquetetitle/enquetetitle.js',
@@ -33,6 +34,7 @@ module.exports = function(config) {
       'app/service/gruntfiles/gruntfiles.js',
       'test/components/about/about.spec.js',
       'test/components/contact/contact.spec.js',
+      'test/components/description/description.spec.js',
       'test/components/home/home.spec.js',
       'test/components/personal/personal.spec.js',
       'test/directives/enquetetitle/enquetetitle.spec.js',
