@@ -25,6 +25,10 @@ footer {
   border-top: 1px solid #e5e5e5;
 }
 
+li {
+  list-style-type: none;
+}
+
 @media (max-width: 34em) {
   .bd-navbar .nav-item {
     float: none;

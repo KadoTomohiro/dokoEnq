@@ -20,6 +20,13 @@
    */
   function HomeController() {
     console.log('HomeController Constructor');
+
+    this.titles = [
+      'セミナーについて',
+      'ハンズオンについて',
+      '新製品について'
+    ];
+
   }
 
   /**
