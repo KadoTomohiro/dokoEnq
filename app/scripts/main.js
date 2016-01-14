@@ -15,7 +15,8 @@
       'dokoEnq.components.personal',
       'dokoEnq.components.confirm',
       'dokoEnq.directive.enquetetitle',
-      'dokoEnq.service.answer'
+      'dokoEnq.service.answer',
+      'dokoEnq.components.complete'
     ])
     .controller('AppController', AppController);
 
@@ -24,7 +25,8 @@
     {path: '/home',    component: 'home'},
     {path: '/personal', component: 'personal'},
     {path: '/description', component: 'description'},
-    {path: '/confirm', component: 'confirm'}
+    {path: '/confirm', component: 'confirm'},
+    {path: '/complete', component: 'complete'}
   ];
 
   AppController.$inject = [];

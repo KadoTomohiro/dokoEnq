@@ -85,7 +85,6 @@
       name: vm.name,
       email: vm.email
     };
-    
     vm.AnswerService.tempStore('personal', answer);
   };
 

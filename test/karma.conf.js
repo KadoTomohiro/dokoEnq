@@ -26,6 +26,7 @@ module.exports = function(config) {
       // endbower
       // injector:js
       'app/components/about/about.js',
+      'app/components/complete/complete.js',
       'app/components/confirm/confirm.js',
       'app/components/contact/contact.js',
       'app/components/description/description.js',
@@ -35,6 +36,7 @@ module.exports = function(config) {
       'app/scripts/config.js',
       'app/service/answer/answer.js',
       'test/components/about/about.spec.js',
+      'test/components/complete/complete.spec.js',
       'test/components/confirm/confirm.spec.js',
       'test/components/contact/contact.spec.js',
       'test/components/description/description.spec.js',
