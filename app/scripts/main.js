@@ -12,7 +12,8 @@
       'dokoEnq.config',
       'dokoEnq.components.home',
       'dokoEnq.components.about',
-      'dokoEnq.components.contact'
+      'dokoEnq.components.contact',
+      'dokoEnq.directive.enquetetitle'
     ])
     .controller('AppController', AppController);
 
