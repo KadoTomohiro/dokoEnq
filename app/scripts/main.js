@@ -15,7 +15,8 @@
       'dokoEnq.components.personal',
       'dokoEnq.components.confirm',
       'dokoEnq.directive.enquetetitle',
-      'dokoEnq.service.answer'
+      'dokoEnq.service.answer',
+      'dokoEnq.service.store'
     ])
     .controller('AppController', AppController);
 

@@ -31,9 +31,14 @@
       return temp.key;
     };
 
+    var store = function () {
+      
+    }
+
     var answerService = {
       tempStore: tempStore,
-      tempRestore: tempRestore
+      tempRestore: tempRestore,
+      store: store
     };
 
     return answerService;

@@ -7,10 +7,12 @@
   'use strict';
 
   angular
-    .module('dokoEnq.service.store', [])
+    .module('dokoEnq.service.store', [
+      'ngStorage'
+    ])
     .factory('StoreService', StoreService);
 
-  StoreService.$inject = [];
+  StoreService.$inject = ['$localStorage'];
 
   /**
    * StoreService
@@ -18,22 +20,14 @@
    * @class StoreService
    * @constructor
    */
-  function StoreService() {
+  function StoreService($localStorage) {
 
-    /**
-     * My property description.  Like other pieces of your comment blocks,
-     * this can span multiple lines.
-     *
-     * @property propertyName
-     * @type {Object}
-     * @default "foo"
-     */
-    var someProperty = {};
+    var store = function () {
+
+    };
 
     var storeService = {
-      someMethod: function() {
-        return;
-      }
+      store: store;
     };
 
     return storeService;
