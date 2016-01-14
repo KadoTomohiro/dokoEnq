@@ -21,6 +21,7 @@ module.exports = function(config) {
       'bower_components/angular-new-router/dist/router.es5.js',
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/ng-file-upload/ng-file-upload.js',
+      'bower_components/tether/dist/js/tether.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       // injector:js
@@ -32,7 +33,7 @@ module.exports = function(config) {
       'app/components/personal/personal.js',
       'app/directives/enquetetitle/enquetetitle.js',
       'app/scripts/config.js',
-      'app/service/gruntfiles/gruntfiles.js',
+      'app/service/answer/answer.js',
       'test/components/about/about.spec.js',
       'test/components/confirm/confirm.spec.js',
       'test/components/contact/contact.spec.js',
@@ -41,6 +42,8 @@ module.exports = function(config) {
       'test/components/personal/personal.spec.js',
       'test/directives/enquetetitle/enquetetitle.spec.js',
       'test/main.spec.js',
+      'test/service/answer/answer.mock.js',
+      'test/service/answer/answer.spec.js',
       'test/service/gruntfiles/gruntfiles.mock.js',
       'test/service/gruntfiles/gruntfiles.spec.js',
       // endinjector

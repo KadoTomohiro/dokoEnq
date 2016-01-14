@@ -11,8 +11,6 @@
       'ngNewRouter',
       'dokoEnq.config',
       'dokoEnq.components.home',
-      'dokoEnq.components.about',
-      'dokoEnq.components.contact',
       'dokoEnq.components.description',
       'dokoEnq.components.personal',
       'dokoEnq.directive.enquetetitle',
@@ -23,8 +21,6 @@
   AppController.$routeConfig = [
     {path: '/',       redirectTo: '/home'},
     {path: '/home',    component: 'home'},
-    {path: '/about',   component: 'about'},
-    {path: '/contact', component: 'contact'},
     {path: '/personal', component: 'personal'},
     {path: '/description', component: 'description'},
     {path: '/confirm', component: 'confirm'}
