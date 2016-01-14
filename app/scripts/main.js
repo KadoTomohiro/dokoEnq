@@ -13,7 +13,8 @@
       'dokoEnq.components.home',
       'dokoEnq.components.about',
       'dokoEnq.components.contact',
-      'dokoEnq.directive.enquetetitle'
+      'dokoEnq.directive.enquetetitle',
+      'dokoEnq.components.description'
     ])
     .controller('AppController', AppController);
 
@@ -21,7 +22,8 @@
     {path: '/',       redirectTo: '/home'},
     {path: '/home',    component: 'home'},
     {path: '/about',   component: 'about'},
-    {path: '/contact', component: 'contact'}
+    {path: '/contact', component: 'contact'},
+    {path: '/description', component: 'description'}
   ];
 
   AppController.$inject = [];
