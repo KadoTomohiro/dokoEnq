@@ -27,6 +27,7 @@ module.exports = function(config) {
       // endbower
       // injector:js
       'app/components/about/about.js',
+      'app/components/complete/complete.js',
       'app/components/confirm/confirm.js',
       'app/components/contact/contact.js',
       'app/components/description/description.js',
@@ -35,7 +36,9 @@ module.exports = function(config) {
       'app/directives/enquetetitle/enquetetitle.js',
       'app/scripts/config.js',
       'app/service/answer/answer.js',
+      'app/service/store/store.js',
       'test/components/about/about.spec.js',
+      'test/components/complete/complete.spec.js',
       'test/components/confirm/confirm.spec.js',
       'test/components/contact/contact.spec.js',
       'test/components/description/description.spec.js',
@@ -47,6 +50,8 @@ module.exports = function(config) {
       'test/service/answer/answer.spec.js',
       'test/service/gruntfiles/gruntfiles.mock.js',
       'test/service/gruntfiles/gruntfiles.spec.js',
+      'test/service/store/store.mock.js',
+      'test/service/store/store.spec.js',
       // endinjector
       'app/scripts/main.js',
       'test/main.spec.js'

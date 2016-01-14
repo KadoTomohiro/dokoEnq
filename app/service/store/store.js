@@ -27,7 +27,7 @@
     };
 
     var storeService = {
-      store: store;
+      store: store
     };
 
     return storeService;

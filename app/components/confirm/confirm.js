@@ -75,7 +75,7 @@
     vm = this;
 
     vm.AnswerService.store();
-  }
+  };
 
   /**
    * Angular ViewModel

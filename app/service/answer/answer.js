@@ -32,8 +32,8 @@
     };
 
     var store = function () {
-      
-    }
+
+    };
 
     var answerService = {
       tempStore: tempStore,
