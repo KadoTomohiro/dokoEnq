@@ -21,15 +21,17 @@
   function StoreService($localStorage, $firebaseObject) {
 
     var store = function(answer) {
-
+      var netStatus;
       if (navigator.onLine) {
         console.log('online!');
         pushServer(answer);
+        netStatus = false;
       } else {
         console.log('offline!');
         localStore(answer);
+        netStatus = true;
       }
-      return true;
+      return netStatus;
     };
 
     var localStore = function(answer) {

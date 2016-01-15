@@ -51,6 +51,8 @@
     vm.pushed = vm.$firebaseArray(ref);
     console.log(vm.pushed);
     vm.unpushed = vm.StoreService.getLocalAnsewrs();
+    vm.network = vm.StoreService.store();
+    console.log(vm.network);
   };
 
   /**

@@ -53,3 +53,7 @@ li {
 	width: 100px;
 	padding: 10px 0;
 }
+
+.my.button.blue:disabled {
+  background: #ccc;
+}
