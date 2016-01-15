@@ -44,7 +44,8 @@ li {
   color: blue;
   
 }
-.pager li > a, .pager li > span {
+/*.pager li > a, .pager li > span {*/
+.my.button.blue{
 	background: -moz-linear-gradient(top,#0099CC 0%,#006699);
 	background: -webkit-gradient(linear, left top, left bottom, from(#0099CC), to(#006699));
 	border: 1px solid #DDD;
