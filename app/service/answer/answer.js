@@ -25,16 +25,16 @@
     var temp = {};
 
     var tempStore = function(key, value) {
-      temp.key = value;
+      temp[key] = value;
     };
 
     var tempRestore = function(key) {
-      return temp.key;
+      return temp[key];
     };
 
     var store = function () {
       console.log('answerService store Methos');
-      StoreService.store(temp);
+      StoreService.store(temp.personal);
 
       temp = {};
     };
