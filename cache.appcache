@@ -1,12 +1,23 @@
 CACHE MANIFEST
-# rev 1 - 2016-01-15T01:34:29.494Z
+# rev 1 - 2016-01-15T02:34:12.215Z
 
 CACHE:
 scripts/main.b254be4b.js
 scripts/plugins.539e8280.js
 scripts/vendor.1231e9ba.js
-styles/main.07d5966b.css
+styles/main.d8638ae4.css
 styles/vendor.c6031eb1.css
+components/about/about.html
+components/complete/complete.html
+components/confirm/confirm.html
+components/contact/contact.html
+components/description/description.html
+components/footer/footer.html
+components/header/header.html
+components/home/home.html
+components/personal/personal.html
+components/store/store.html
+directives/enquetetitle/enquetetitle.html
 index.html
 favicon.b25e58c4.ico
 
