@@ -1,7 +1,7 @@
 <div>送信済み<span class="badge">{{store.pushed.length}}</span></div>
 <ul class="list-group" >
   <li class="list-group-item" ng-repeat="answered in store.pushed">{{answered.name}}
-<button type="button" name="button" ng-click="store.pushed.$remove(answered)"></button>
+<!-- <button type="button" name="button" ng-click="store.pushed.$remove(answered)"></button> -->
   </li>
 </ul>
 <div>未送信<span class="badge">{{store.unpushed.length}}</span><button type="button" name="button" ng-click="store.allPush()" class="my button blue" ng-disabled="store.network">送信する</button></div>
