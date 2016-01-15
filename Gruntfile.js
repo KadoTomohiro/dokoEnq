@@ -100,7 +100,8 @@ module.exports = function (grunt) {
     'copy:dist',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'replace'
   ]);
 
   grunt.registerTask('default', [

@@ -14,7 +14,7 @@
           '<%= paths.dist %>/images/*.png',
           '<%= paths.dist %>/scripts/*.js',
           '<%= paths.dist %>/styles/*.css',
-          '<%= paths.dist %>/*.html',
+          '<%= paths.dist %>/**/*.html',
           '<%= paths.dist %>/*.ico',
           '<%= paths.dist %>/*.png'
         ],
