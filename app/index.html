@@ -1,70 +1,72 @@
 <!doctype html>
-<html lang="ja-JP">
-  <head>
-    <meta charset="utf-8">
-    <base href="/">
-    <!-- <base href="http://kadotomohiro.github.io/dokoEnq/"> -->
-    <title>dokoEnq</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="dokoEnq" ng-controller="AppController as dokoEnq">
-    <!--[if lt IE 10]>
+<html lang="ja-JP" manifest="cache.appcache">
+
+<head>
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
+  <base href="http://kadotomohiro.github.io/dokoEnq/">
+  <title>dokoEnq</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body ng-app="dokoEnq" ng-controller="AppController as dokoEnq">
+  <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-include="'components/header/header.html'"></div>
+  <div ng-include="'components/header/header.html'"></div>
 
-    <div class="container">
+  <div class="container">
 
-      <div ng-viewport></div>
+    <div ng-viewport></div>
 
-      <!-- <div ng-include="'components/footer/footer.html'"></div> -->
+    <!-- <div ng-include="'components/footer/footer.html'"></div> -->
 
-    </div>
+  </div>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-new-router/dist/router.es5.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
-    <script src="bower_components/tether/dist/js/tether.js"></script>
-    <script src="bower_components/ngstorage/ngStorage.js"></script>
-    <script src="bower_components/firebase/firebase.js"></script>
-    <script src="bower_components/angularfire/dist/angularfire.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-
-        <!-- build:js(.) scripts/plugins.js -->
-        <script src="bower_components/bootstrap/js/dist/alert.js"></script>
-        <script src="bower_components/bootstrap/js/dist/button.js"></script>
-        <script src="bower_components/bootstrap/js/dist/carousel.js"></script>
-        <script src="bower_components/bootstrap/js/dist/collapse.js"></script>
-        <script src="bower_components/bootstrap/js/dist/dropdown.js"></script>
-        <script src="bower_components/bootstrap/js/dist/modal.js"></script>
-        <script src="bower_components/bootstrap/js/dist/popover.js"></script>
-        <script src="bower_components/bootstrap/js/dist/scrollspy.js"></script>
-        <script src="bower_components/bootstrap/js/dist/tab.js"></script>
-        <script src="bower_components/bootstrap/js/dist/tooltip.js"></script>
-        <script src="bower_components/bootstrap/js/dist/util.js"></script>
-        <!-- endbuild -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-new-router/dist/router.es5.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+  <script src="bower_components/tether/dist/js/tether.js"></script>
+  <script src="bower_components/ngstorage/ngStorage.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <!-- <script>
+  <!-- build:js(.) scripts/plugins.js -->
+  <script src="bower_components/bootstrap/js/dist/alert.js"></script>
+  <script src="bower_components/bootstrap/js/dist/button.js"></script>
+  <script src="bower_components/bootstrap/js/dist/carousel.js"></script>
+  <script src="bower_components/bootstrap/js/dist/collapse.js"></script>
+  <script src="bower_components/bootstrap/js/dist/dropdown.js"></script>
+  <script src="bower_components/bootstrap/js/dist/modal.js"></script>
+  <script src="bower_components/bootstrap/js/dist/popover.js"></script>
+  <script src="bower_components/bootstrap/js/dist/scrollspy.js"></script>
+  <script src="bower_components/bootstrap/js/dist/tab.js"></script>
+  <script src="bower_components/bootstrap/js/dist/tooltip.js"></script>
+  <script src="bower_components/bootstrap/js/dist/util.js"></script>
+  <!-- endbuild -->
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <!-- <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
@@ -73,23 +75,24 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script> -->
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <!-- injector:js -->
-        <script src="components/about/about.js"></script>
-        <script src="components/complete/complete.js"></script>
-        <script src="components/confirm/confirm.js"></script>
-        <script src="components/contact/contact.js"></script>
-        <script src="components/description/description.js"></script>
-        <script src="components/home/home.js"></script>
-        <script src="components/personal/personal.js"></script>
-        <script src="components/store/store.js"></script>
-        <script src="directives/enquetetitle/enquetetitle.js"></script>
-        <script src="scripts/config.js"></script>
-        <script src="service/answer/answer.js"></script>
-        <script src="service/store/store.js"></script>
-        <!-- endinjector -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+  <!-- build:js({app,.tmp}) scripts/main.js -->
+  <!-- injector:js -->
+  <script src="components/about/about.js"></script>
+  <script src="components/complete/complete.js"></script>
+  <script src="components/confirm/confirm.js"></script>
+  <script src="components/contact/contact.js"></script>
+  <script src="components/description/description.js"></script>
+  <script src="components/home/home.js"></script>
+  <script src="components/personal/personal.js"></script>
+  <script src="components/store/store.js"></script>
+  <script src="directives/enquetetitle/enquetetitle.js"></script>
+  <script src="scripts/config.js"></script>
+  <script src="service/answer/answer.js"></script>
+  <script src="service/store/store.js"></script>
+  <!-- endinjector -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
 
-  </body>
+</body>
+
 </html>

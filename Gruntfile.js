@@ -139,7 +139,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deploy', [
     'build',
-    //'appcache',
+    'appcache',
     'gh-pages'
   ]);
 

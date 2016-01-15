@@ -58,14 +58,16 @@
     };
 
     var allPush = function() {
+      console.log('StoreService allPush Method');
       var answers = getLocalAnsewrs();
 
-      var sucsess = true;
-      angular.forEach(function(answer) {
-        sucsess = sucsess && pushServer(answer);
+      console.log(answers);
+      angular.forEach(answers, function(answer) {
+        console.log(answer);
+        pushServer(answer);
       });
 
-      delete $localStorage.answer;
+      $localStorage.answers = [];
     };
 
     var getLocalAnsewrs = function() {
