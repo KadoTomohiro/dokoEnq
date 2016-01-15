@@ -20,7 +20,7 @@
    */
   function EnqueteTitleDirective() {
     function EnquetetitleController() {
-      this.title = 'タイトル';
+      this.title = 'セミナーについて';
     }
 
     return {
