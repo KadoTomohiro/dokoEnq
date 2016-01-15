@@ -68,6 +68,7 @@
     "element": true,
     "by": true,
     "browser": true,
-    "po": true
+    "po": true,
+    "Firebase": false
   }
 }
