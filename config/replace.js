@@ -6,13 +6,14 @@
         options: {
           patterns: [
             {
-              match: 'base href="/"',
-              replacement: 'base href="http://kadotomohiro.github.io/dokoEnq/"'
+              match: '<base href="/">',
+              replacement: '<base href="http://kadotomohiro.github.io/dokoEnq/">'
             }
-          ]
+          ],
+           usePrefix: false
         },
         files: [
-          {expand: true, flatten: true, src: ['dist/index.html'], dest: 'dist/'}
+          {expand: true, flatten: true, src: ['<%= paths.dist %>/index.html'], dest: '<%= paths.dist %>/'}
         ]
       }
   };

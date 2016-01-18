@@ -69,7 +69,7 @@
         pushServer(answer);
       });
 
-      $localStorage.answers = [];
+      $localStorage.answers = undefined;
     };
 
     var getLocalAnsewrs = function() {
@@ -79,7 +79,10 @@
     var storeService = {
       store: store,
       allPush: allPush,
-      getLocalAnsewrs: getLocalAnsewrs
+      getLocalAnsewrs: getLocalAnsewrs,
+      online: function() {
+        return navigator.onLine;
+      }
     };
 
     return storeService;
