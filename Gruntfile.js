@@ -17,11 +17,14 @@ module.exports = function(grunt) {
       dist: 'dist',
       karma: {
         config: 'test/karma.conf.js'
-      }
+      },
     },
     pkg: grunt.file.readJSON('package.json'),
     jshintrc: {
       app: grunt.file.readJSON('.jshintrc')
+    },
+    url: {
+      ghpages: 'http://kadotomohiro.github.io/dokoEnq/'
     }
   };
 

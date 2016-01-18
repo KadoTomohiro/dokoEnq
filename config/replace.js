@@ -7,7 +7,7 @@
           patterns: [
             {
               match: '<base href="/">',
-              replacement: '<base href="http://kadotomohiro.github.io/dokoEnq/">'
+              replacement: '<base href="<%= url.ghpages%>">'
             }
           ],
            usePrefix: false
