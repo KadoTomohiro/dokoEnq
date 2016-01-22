@@ -10,7 +10,7 @@
               replacement: '<base href="<%= url.ghpages%>">'
             }
           ],
-           usePrefix: false
+          usePrefix: false
         },
         files: [
           {expand: true, flatten: true, src: ['<%= paths.dist %>/index.html'], dest: '<%= paths.dist %>/'}
