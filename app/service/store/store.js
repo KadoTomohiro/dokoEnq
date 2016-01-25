@@ -18,7 +18,7 @@
    * @class StoreService
    * @constructor
    */
-  function StoreService($localStorage, $firebaseObject) {
+  function StoreService($localStorage) {
 
     var store = function(answer) {
       var netStatus;
