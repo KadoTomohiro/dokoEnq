@@ -1,0 +1,31 @@
+[{
+  "auther": "autherName",
+  "id": "autherId",
+  "enquate": [{
+    "id": "enquateId",
+    "title": "enquateTitle",
+    "discription": "discriptionText",
+    "config": {
+      "private": "boolean",
+    },
+    "template": {
+      "private":[
+        {
+          "no": "",
+          "title": "",
+          "type": "",
+        },
+      ],
+      "questions": [{
+        "no": "questionNo",
+        "title": "questionTitle",
+        "text": "questionText",
+        "type": "questionType{select, mulchSelect, text}",
+      }],
+    },
+    "answers": [{
+      "privates": [],
+      "questions": []
+    }]
+  }]
+}]
