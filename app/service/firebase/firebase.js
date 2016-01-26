@@ -8,9 +8,9 @@
 
   angular
     .module('dokoEnq.service.firebase', [])
-    .factory('FirebaseService', FirebaseService);
+    .factory('firebaseService', FirebaseService);
 
-  FirebaseService.$inject = [];
+  FirebaseService.$inject = ['$firebaseObject', '$firebaseArray', '$firebaseAuth'];
 
   /**
    * FirebaseService
@@ -18,17 +18,23 @@
    * @class FirebaseService
    * @constructor
    */
-  function FirebaseService() {
+  function FirebaseService($firebaseObject, $firebaseArray, $firebaseAuth) {
 
     var ref = new Firebase('https://dokoenq.firebaseio.com');
 
-    // var firebaseService = {
-    //   someMethod: function() {
-    //     return;
-    //   }
-    // };
+    var object = $firebaseObject(ref);
+    var array = $firebaseArray(ref);
+    var auth = $firebaseAuth(ref);
+    var authData = {};
 
-    return ref;
+    var firebaseService = {
+      object: object,
+      array: array,
+      auth: auth,
+      authData: authData
+    };
+
+    return firebaseService;
   }
 
 })();
