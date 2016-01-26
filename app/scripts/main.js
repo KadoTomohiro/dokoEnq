@@ -18,6 +18,7 @@
       'dokoEnq.components.confirm',
       'dokoEnq.components.complete',
       'dokoEnq.components.store',
+      'dokoEnq.components.signin',
       'dokoEnq.directive.enquetetitle',
       'dokoEnq.service.answer',
       'dokoEnq.service.store',
@@ -48,10 +49,11 @@
     {path: '/description', component: 'description'},
     {path: '/confirm', component: 'confirm'},
     {path: '/complete', component: 'complete'},
-    {path: '/store', component: 'store'}
+    {path: '/store', component: 'store'},
+    {path: '/signin', component: 'signin'}
   ];
 
-  AppController.$inject = [];
+  AppController.$inject = ['$rootScope', '$location', 'firebaseService'];
 
   /**
    * AppController
@@ -60,6 +62,31 @@
    * @main dokoEnq
    * @constructor
    */
-  function AppController () {
+  function AppController ($rootScope, $location, firebaseService) {
+    console.log('AppController construction');
+    this.fb = firebaseService;
+    this.$location = $location;
+
+    vm = this;
+
+    // $rootScope.$on('$locationChangeStart', function() {
+    //   console.log(vm.fb.authData);
+    //   if (vm.fb.authData) {
+    //     console.log('authorication!');
+    //   } else {
+    //     console.log('no authorication!');
+    //     vm.$location.path('/signin');
+    //   }
+    // });
+
+    this.fb.auth.$onAuth(function(authData) {
+      vm.fb.authData = authData;
+    });
   }
+
+   AppController.prototype.signOut = function () {
+     vm.fb.auth.$unauth();
+   }
+
+  var vm;
 })();

@@ -10,7 +10,8 @@
     <ul class="nav navbar-nav">
       <li class="hidden-xs-down"><a class="navbar-brand" href="/">どこでもアンケート</a></li>
       <li class="nav-item" ng-if="1" style="float:right;"><a class="nav-link" href="store">Reseult</a></li>
-
+      <li class="nav-item"><a href="signin" class="btn btn-primary" ng-if="!dokoEnq.fb.authData">Sign In</a></li>
+      <li class="nav-item"><button ng-click="dokoEnq.signOut()" class="btn btn-danger" ng-if="dokoEnq.fb.authData">Sign Out</button></li>
       <!-- <li class="nav-item" ng-if="1" style="float:right;"><a class="nav-link" href="menu">MENU</a></li> -->
       <!-- <li class="nav-item"><a class="nav-link" ng-link="home">Home</a></li>
       <li class="nav-item"><a class="nav-link" ng-link="about">About</a></li>
