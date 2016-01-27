@@ -42,7 +42,7 @@ li {
 
 .blue {
   color: blue;
-  
+
 }
 /*.pager li > a, .pager li > span {*/
 .my.button.blue{
@@ -56,4 +56,8 @@ li {
 
 .my.button.blue:disabled {
   background: #ccc;
+}
+
+.pull-right {
+  float:right;
 }

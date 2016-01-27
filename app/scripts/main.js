@@ -53,24 +53,14 @@
 
     vm = this;
 
-    // $rootScope.$on('$locationChangeStart', function() {
-    //   console.log(vm.fb.authData);
-    //   if (vm.fb.authData) {
-    //     console.log('authorication!');
-    //   } else {
-    //     console.log('no authorication!');
-    //     vm.$location.path('/signin');
-    //   }
-    // });
-
     this.fb.auth.$onAuth(function(authData) {
       vm.fb.authData = authData;
     });
   }
 
-   AppController.prototype.signOut = function () {
+  AppController.prototype.signOut = function () {
      vm.fb.auth.$unauth();
-   }
+   };
 
   var vm;
 })();

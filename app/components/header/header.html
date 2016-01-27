@@ -1,17 +1,16 @@
 <header class="navbar navbar-light navbar-fixed-top bg-faded bd-navbar">
-  <div class="clearfix hidden-sm-up">
-    <button class="navbar-toggler pull-right hidden-sm-up collapsed" type="button" data-toggle="collapse" data-target="#app-nav"  aria-expanded="false">
-      &#9776;
-    </button>
-    <a class="navbar-brand" href="/">dokoEnq</a>
+  <div class="">
+    <a class="navbar-brand" href="/">どこでもアンケート</a>
   </div>
 
   <nav class="navbar-toggleable-xs collapse" id="app-nav" aria-expanded="false" style="height: 0px;">
-    <ul class="nav navbar-nav">
-      <li class="hidden-xs-down"><a class="navbar-brand" href="/">どこでもアンケート</a></li>
-      <li class="nav-item" ng-if="1" style="float:right;"><a class="nav-link" href="store">Reseult</a></li>
-      <li class="nav-item"><a href="signin" class="btn btn-primary" ng-if="!dokoEnq.fb.authData">Sign In</a></li>
-      <li class="nav-item"><button ng-click="dokoEnq.signOut()" class="btn btn-danger" ng-if="dokoEnq.fb.authData">Sign Out</button></li>
+    <ul class="nav navbar-nav row pull-right">
+      <li class="hidden-xs-down"></li>
+      <li class="nav-item pull-right" ng-if="1"><a class="nav-link" href="store">Reseult</a></li>
+      <li class="nav-item pull-right">
+        <a href="signin" class="btn btn-primary" ng-if="!dokoEnq.fb.authData">Sign In</a>
+        <button ng-click="dokoEnq.signOut()" class="btn btn-danger" ng-if="dokoEnq.fb.authData">Sign Out</button>
+      </li>
       <!-- <li class="nav-item" ng-if="1" style="float:right;"><a class="nav-link" href="menu">MENU</a></li> -->
       <!-- <li class="nav-item"><a class="nav-link" ng-link="home">Home</a></li>
       <li class="nav-item"><a class="nav-link" ng-link="about">About</a></li>
