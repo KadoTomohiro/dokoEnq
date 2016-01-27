@@ -10,7 +10,7 @@
     .module('dokoEnq.service.store', [])
     .factory('StoreService', StoreService);
 
-  StoreService.$inject = ['$localStorage', '$firebaseObject'];
+  StoreService.$inject = ['$localStorage'];
 
   /**
    * StoreService

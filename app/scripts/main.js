@@ -24,6 +24,22 @@
       'dokoEnq.service.store',
       'dokoEnq.service.firebase'
     ])
+    .run(function($rootScope){//, $location, $route, AuthService) {
+      $rootScope.$on('$routeChangeStart', function(ev, next, current) {
+        console.log('$routeChangeStart');
+        // if (next.controller == 'LoginCtrl') {
+        //   if (AuthService.isLogged()) {
+        //     $location.path('/');
+        //     $route.reload();
+        //   }
+        // } else {
+        //   if (AuthService.isLogged() == false) {
+        //     $location.path('/login');
+        //     $route.reload();
+        //   }
+        // }
+      });
+    })
     .controller('AppController', AppController);
 
   AppController.$routeConfig = [
