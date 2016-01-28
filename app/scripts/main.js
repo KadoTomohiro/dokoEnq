@@ -22,24 +22,9 @@
       'dokoEnq.directive.enquetetitle',
       'dokoEnq.service.answer',
       'dokoEnq.service.store',
+      'dokoEnq.service.onlinestatus',
       'dokoEnq.service.firebase'
     ])
-    .run(function($rootScope){//, $location, $route, AuthService) {
-      $rootScope.$on('$routeChangeStart', function(ev, next, current) {
-        console.log('$routeChangeStart');
-        // if (next.controller == 'LoginCtrl') {
-        //   if (AuthService.isLogged()) {
-        //     $location.path('/');
-        //     $route.reload();
-        //   }
-        // } else {
-        //   if (AuthService.isLogged() == false) {
-        //     $location.path('/login');
-        //     $route.reload();
-        //   }
-        // }
-      });
-    })
     .controller('AppController', AppController);
 
   AppController.$routeConfig = [
@@ -53,7 +38,7 @@
     {path: '/signin', component: 'signin'}
   ];
 
-  AppController.$inject = ['$rootScope', '$location', 'firebaseService'];
+  AppController.$inject = ['$rootScope', '$location', 'OnlineStatusService', 'firebaseService'];
 
   /**
    * AppController
@@ -62,15 +47,20 @@
    * @main dokoEnq
    * @constructor
    */
-  function AppController ($rootScope, $location, firebaseService) {
+  function AppController ($rootScope, $location, OnlineStatusService, firebaseService) {
     console.log('AppController construction');
     this.fb = firebaseService;
     this.$location = $location;
-
+    this.onlineStatus = OnlineStatusService;
     vm = this;
 
     this.fb.auth.$onAuth(function(authData) {
       vm.fb.authData = authData;
+    });
+
+    $rootScope.$watch(this.onlineStatus.isOnline, function(online) {
+      console.log('online status is', online);
+      vm.isOnline = vm.onlineStatus.isOnline();
     });
   }
 

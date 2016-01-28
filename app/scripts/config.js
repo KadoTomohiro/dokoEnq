@@ -6,7 +6,7 @@
     .module('dokoEnq.config', [])
     .config(AppConfig);
 
-  function AppConfig($locationProvider, $routeProvider) {
+  function AppConfig($locationProvider) {
     /*
       # Hashbang Mode
       http://www.example.com/#/aaa/
@@ -15,8 +15,7 @@
     */
     $locationProvider.html5Mode(true);
 
-    console.log('$routeProvider:', $routeProvider);
   }
 
-  AppConfig.$inject = ['$locationProvider', '$routeProvider'];
+  AppConfig.$inject = ['$locationProvider'];
 })();
