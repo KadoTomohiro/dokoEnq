@@ -1,11 +1,13 @@
 CACHE MANIFEST
-# rev 1 - 2016-01-28T11:40:01.456Z
+# rev 1 - 2016-01-29T06:12:04.933Z
 
 CACHE:
-scripts/main.f8cc8a4f.js
+images/offline.png
+images/online.png
+scripts/main.26f2c468.js
 scripts/plugins.1cad0636.js
 scripts/vendor.1231e9ba.js
-styles/main.47df4a74.css
+styles/main.77bfb939.css
 styles/vendor.c6031eb1.css
 components/about/about.html
 components/complete/complete.html
