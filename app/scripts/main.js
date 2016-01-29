@@ -38,7 +38,7 @@
     {path: '/signin', component: 'signin'}
   ];
 
-  AppController.$inject = ['$rootScope', '$location', 'OnlineStatusService', 'firebaseService'];
+  AppController.$inject = ['$rootScope', '$location', '$window', 'OnlineStatusService', 'firebaseService'];
 
   /**
    * AppController
@@ -47,21 +47,28 @@
    * @main dokoEnq
    * @constructor
    */
-  function AppController ($rootScope, $location, OnlineStatusService, firebaseService) {
+  function AppController ($rootScope, $location, $window, OnlineStatusService, firebaseService) {
     console.log('AppController construction');
     this.fb = firebaseService;
     this.$location = $location;
     this.onlineStatus = OnlineStatusService;
     vm = this;
 
+    // firebaseで認証されたら認証状態を保存する
+    // localStrageへの保存を検討する
     this.fb.auth.$onAuth(function(authData) {
       vm.fb.authData = authData;
     });
 
-    $rootScope.$watch(this.onlineStatus.isOnline, function(online) {
-      console.log('online status is', online);
-      vm.isOnline = vm.onlineStatus.isOnline();
-    });
+    // オンライン状態
+    vm.isOnline = vm.onlineStatus.isOnline;
+
+    $window.addEventListener('updateready', function () {
+      if ($window.applicationCache.status == $window.applicationCache.UPDATEREADY) {
+        window.applicationCache.swapCache();
+        window.location.reload();
+      }
+    }, false)
   }
 
   AppController.prototype.signOut = function () {

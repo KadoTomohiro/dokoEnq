@@ -104,8 +104,7 @@ module.exports = function(grunt) {
     'copy:dist',
     'filerev',
     'usemin',
-    'htmlmin',
-    'replace:dist'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
@@ -145,8 +144,8 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy', [
     'build',
     'appcache',
+    'replace:dist',
     'gh-pages',
-    'replace:dist'
   ]);
 
 };

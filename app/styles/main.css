@@ -61,3 +61,8 @@ li {
 .pull-right {
   float:right;
 }
+
+img.online-status{
+  height: 38px;
+  width: 38px;
+}

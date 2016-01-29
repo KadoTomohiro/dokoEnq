@@ -10,7 +10,7 @@
     .module('dokoEnq.components.store', [])
     .controller('StoreController', StoreController);
 
-  StoreController.$inject = ['StoreService', '$firebaseArray'];
+  StoreController.$inject = ['StoreService', '$firebaseArray', 'OnlineStatusService'];
 
   /**
    * StoreController
@@ -18,10 +18,11 @@
    * @class StoreController
    * @constructor
    */
-  function StoreController(StoreService, $firebaseArray) {
+  function StoreController(StoreService, $firebaseArray, OnlineStatusService) {
     console.log('StoreController Constructor');
     this.StoreService = StoreService;
     this.$firebaseArray = $firebaseArray;
+    this.OnlineStatus = OnlineStatusService;
   }
 
   /**
@@ -51,8 +52,8 @@
     vm.pushed = vm.$firebaseArray(ref);
     console.log(vm.pushed);
     vm.unpushed = vm.StoreService.getLocalAnsewrs();
-    vm.offline = vm.StoreService.offline();
-    console.log(vm.offline);
+    vm.isOnline = vm.OnlineStatus.isOnline;
+    
   };
 
   /**

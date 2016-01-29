@@ -28,17 +28,15 @@
       return onlineStatus.onLine;
     };
 
-    $window.addEventListener('online', function() {
-      onlineStatus.onLine = true;
-      console.log('online!');
+    var setStatus = function() {
+      onlineStatus.onLine = $window.navigator.onLine;
+      console.log(onlineStatus.onLine ? 'online' : 'offline', 'now!');
       $rootScope.$digest();
-    }, true);
+    };
 
-    $window.addEventListener('offline', function() {
-      onlineStatus.onLine = false;
-      console.log('offline');
-      $rootScope.$digest();
-    }, true);
+    $window.addEventListener('online',setStatus, true);
+
+    $window.addEventListener('offline', setStatus, true);
 
     return onlineStatus;
   }

@@ -52,7 +52,10 @@
     "tingodb": "^0.4.2"
   },
   "scripts": {
-    "install": "node ./node_modules/protractor/bin/webdriver-manager update"
+    "install": "node ./node_modules/protractor/bin/webdriver-manager update",
+    "serve": "grunt serve",
+    "build": "grunt build",
+    "deploy": "grunt deploy"
   },
   "engines": {
     "node": ">=0.12.0"

@@ -10,6 +10,6 @@
       ]
     },
     html: ['<%= paths.dist %>/{,*/}*.html'],
-    css: ['<%= paths.dist %>/styles/{,*/}*.css']
+    css: ['<%= paths.dist %>/styles/{,*/}*.css'],
   };
 })();

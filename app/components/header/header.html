@@ -6,9 +6,8 @@
   <nav class="navbar-toggleable-xs collapse" id="app-nav" aria-expanded="false" style="height: 0px;">
     <ul class="nav navbar-nav row pull-right">
       <li class="nav-item">
-        {{dokoEnq.isOnline}}
-        <span ng-if="dokoEnq.isOnline">On</span>
-        <span ng-if="!dokoEnq.isOnline">Off</span>
+        <img class="online-status" src="images/online.png" alt="online" ng-if="dokoEnq.isOnline()"></img>
+        <img class="online-status" src="images/offline.png" alt="offline" ng-if="!dokoEnq.isOnline()"></img>
       </li>
       <li class="nav-item pull-right" ng-if="1"><a class="nav-link" href="store">Reseult</a></li>
       <li class="nav-item pull-right">

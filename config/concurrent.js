@@ -10,8 +10,9 @@
     ],
     dist: [
       'copy:styles',
-      'imagemin',
       'svgmin'
     ]
   };
 })();
+
+//'imagemin',

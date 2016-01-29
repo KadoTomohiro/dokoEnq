@@ -10,7 +10,7 @@
         dest: '<%= paths.dist %>',
         src: [
           '*.{ico,png,txt}',
-          'images/{,*/}*.webp',
+          'images/{,*/}*.*',
           'components/{,*/}*.html',
           'directives/{,*/}*.html',
           '{,*/}*.html',

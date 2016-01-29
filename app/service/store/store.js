@@ -10,7 +10,7 @@
     .module('dokoEnq.service.store', [])
     .factory('StoreService', StoreService);
 
-  StoreService.$inject = ['$localStorage'];
+  StoreService.$inject = ['$localStorage', 'OnlineStatusService'];
 
   /**
    * StoreService
@@ -18,10 +18,10 @@
    * @class StoreService
    * @constructor
    */
-  function StoreService($localStorage) {
+  function StoreService($localStorage, OnlineStatusService) {
 
     var store = function(answer) {
-      if (navigator.onLine) {
+      if (OnlineStatusService.isOnline) {
         console.log('online!');
         pushServer(answer);
       } else {
