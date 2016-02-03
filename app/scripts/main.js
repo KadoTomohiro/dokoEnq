@@ -64,11 +64,11 @@
     vm.isOnline = vm.onlineStatus.isOnline;
 
     $window.addEventListener('updateready', function () {
-      if ($window.applicationCache.status == $window.applicationCache.UPDATEREADY) {
+      if ($window.applicationCache.status === $window.applicationCache.UPDATEREADY) {
         window.applicationCache.swapCache();
         window.location.reload();
       }
-    }, false)
+    }, false);
   }
 
   AppController.prototype.signOut = function () {

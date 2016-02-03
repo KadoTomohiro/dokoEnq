@@ -1,0 +1,60 @@
+{
+  "users": { // user list
+    "user1": { // uid
+      "name": "KadoTomohiro", // userName
+      "enquetes": {
+        "enquete1": true,
+      }
+    }, //  ...
+  },
+  "templates": {　 // temolate list
+    "enquete1": { // enqueteId
+      "title": "セミナーについて",
+      "discription": "セミナーについてのご意見をお聞かせください"
+      "groups": {
+        "group1": {
+          "discription": "受講者情報"
+        },
+        "group2": {
+          "discription": "セミナーについて"
+        }
+      },
+      "questions": {
+        "q1": { // question no
+          "question": "氏名",
+          "group": "group1",
+          "type": "text",
+          "format": "text",
+          "require": true
+        },
+        "q2": {
+          "question": "所属",
+          "group": "group1",
+          "type": "select",
+          "format": "single",
+          "items": ["JA", "アグリ", "モバイル", "IDC", "営業", "金融"],
+          "require": true,
+        },
+        "q3": {
+          "question": "セミナーに参加した目的を教えてください",
+          "group": "group2",
+          "type": "select",
+          "format": "mulch",
+          "items": ["業務活用のため", "お客様提案のため", "学習のため"],
+          "require": true
+        },
+        "q4": {
+          "question": "セミナーに参加した目的は達成できましたか",
+          "group": "group2",
+          "type": "select",
+          "format": "mulch",
+          "items": ["達成できた", "概ね達成できた", "あまり達成できなかった", "達成できなかった"],
+          "require": true
+        }
+      }
+    }
+  },
+  "answers": {
+
+  }
+}

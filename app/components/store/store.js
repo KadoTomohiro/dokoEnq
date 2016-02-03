@@ -53,7 +53,6 @@
     console.log(vm.pushed);
     vm.unpushed = vm.StoreService.getLocalAnsewrs();
     vm.isOnline = vm.OnlineStatus.isOnline;
-    
   };
 
   /**
