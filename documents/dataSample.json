@@ -6,7 +6,7 @@
     "title": "enquateTitle",
     "discription": "discriptionText",
     "config": {
-      "private": "boolean",
+      "private": "boolean"
     },
     "template": {
       "private":[
@@ -15,14 +15,14 @@
           "title": "",
           "type": "",
           "require": "true or false"
-        },
+        }
       ],
       "questions": [{
         "no": "questionNo",
         "title": "questionTitle",
         "text": "questionText",
-        "type": "questionType{select, mulchSelect, text}",
-      }],
+        "type": "questionType{select, mulchSelect, text}"
+      }]
     },
     "answers": [{
       "privates": [],
