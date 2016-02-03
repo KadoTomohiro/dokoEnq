@@ -66,3 +66,78 @@ img.online-status{
   height: 38px;
   width: 38px;
 }
+/*button style*/
+#signInButton ul{
+	height:auto;
+}
+#signInButton li{
+	/*font-size:14px;*/
+	float:none;
+	text-align:center;
+	width:15rem;
+	margin-right:1%;
+	margin-bottom:1%;
+	border-radius:3px;
+	list-style:none;
+  /*font-size: large;*/
+}
+#signInButton li.signInButton-github{
+	background:#aaaaaa;
+	box-shadow:0 2px #888888;
+}
+#signInButton li.signInButton-github:hover{
+	background:#cccccc;
+}
+#signInButton li.signInButton-twitter{
+	background:#55aaee;
+	box-shadow:0 2px #3388ee;
+}
+#signInButton li.signInButton-twitter:hover{
+	background:#77bbff;
+}
+#signInButton li.signInButton-facebook{
+	background:#3355bb;
+	box-shadow:0 2px #334477;
+}
+#signInButton li.signInButton-facebook:hover{
+	background:#5577cc;
+}
+#signInButton li.signInButton-google{
+	background:#ee5544;
+	box-shadow:0 2px #cc3322;
+}
+#signInButton li.signInButton-google:hover{
+	background:#ee7766;
+}
+#signInButton li.signInButton-hatena{
+	background:#3388bb;
+	box-shadow:0 2px #335599;
+}
+#signInButton li.signInButton-hatena:hover{
+	background:#6699dd;
+}
+#signInButton li.signInButton-pocket{
+	background:#ee3355;
+	box-shadow:0 2px #dd1122;
+}
+#signInButton li.signInButton-pocket:hover{
+	background:#ff5566;
+}
+#signInButton li.signInButton-line{
+	background:#11cc11;
+	box-shadow:0 2px #009900;
+}
+#signInButton li.signInButton-line:hover{
+	background:#22dd22;
+}
+#signInButton a{
+	display:block;
+	height:2.5rem;
+	padding-top:0.5rem;
+	color:#ffffff;
+	text-decoration:none;
+}
+#signInButton a:hover{
+	text-decoration:none;
+	color:#ffffff;
+}
