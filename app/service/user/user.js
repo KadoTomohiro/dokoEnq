@@ -36,6 +36,7 @@
           firebase.object.$save();
 
         }
+
         console.log(userData);
       });
     };
