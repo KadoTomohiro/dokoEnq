@@ -55,6 +55,9 @@
   }
 
   function newUser(name) {
+    if (!name) {
+      name = "unknouwn";
+    }
     return {
       name: name,
       enquetes: []
