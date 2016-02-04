@@ -1,36 +1,38 @@
 {
   "users": {
-    "user1": {
+    "github:11469155": {
       "name": "KadoTomohiro",
-      "enquetes": {
-        "enquete1": true
-      }
+      "enquetes": ["enquete1"]
+    },
+    "github:aaa": {
+      "name": "KadoTomohiro",
+      "enquetes": []
     }
   },
-  "templates": {　
+  "enquetes": {
     "enquete1": {
       "title": "セミナーについて",
       "discription": "セミナーについてのご意見をお聞かせください",
       "open": true,
       "groups": {
         "group1": {
-          "discription": "受講者情報"
+          "discription": "受講者情報",
+          "questions": ["q1", "q2"]
         },
         "group2": {
-          "discription": "セミナーについて"
+          "discription": "セミナーについて",
+          "questions": ["q3", "q4"]
         }
       },
       "questions": {
         "q1": {
           "question": "氏名",
-          "group": "group1",
           "type": "text",
           "format": "text",
           "require": true
         },
         "q2": {
           "question": "所属",
-          "group": "group1",
           "type": "select",
           "format": "single",
           "items": ["JA", "アグリ", "モバイル", "IDC", "営業", "金融"],
@@ -38,7 +40,6 @@
         },
         "q3": {
           "question": "セミナーに参加した目的を教えてください",
-          "group": "group2",
           "type": "select",
           "format": "mulch",
           "items": ["業務活用のため", "お客様提案のため", "学習のため"],
@@ -46,7 +47,6 @@
         },
         "q4": {
           "question": "セミナーに参加した目的は達成できましたか",
-          "group": "group2",
           "type": "select",
           "format": "mulch",
           "items": ["達成できた", "概ね達成できた", "あまり達成できなかった", "達成できなかった"],
@@ -56,6 +56,16 @@
     }
   },
   "answers": {
-
+    "enquete1": [{
+      "q1": "",
+      "q2": "",
+      "q3": "",
+      "q4": ""
+    }, {
+      "q1": "",
+      "q2": "",
+      "q3": "",
+      "q4": ""
+    }]
   }
 }

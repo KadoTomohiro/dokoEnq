@@ -10,7 +10,7 @@
     .module('dokoEnq.components.signin', [])
     .controller('SigninController', SigninController);
 
-  SigninController.$inject = ['firebaseService', '$window'];
+  SigninController.$inject = ['firebaseService', '$window', 'UserService'];
 
   /**
    * SigninController
@@ -18,12 +18,12 @@
    * @class SigninController
    * @constructor
    */
-  function SigninController(firebaseService, $window) {
+  function SigninController(firebaseService, $window, UserService) {
     console.log('SigninController Constructor');
 
     this.firebaseService = firebaseService;
     this.$window = $window;
-
+    this.user = UserService;
     vm = this;
   }
 
@@ -77,10 +77,8 @@
 
   SigninController.prototype.signin = function(provider) {
 
-    vm.firebaseService.auth.$authWithOAuthPopup(provider, {
-      scope: 'email'
-    }).then(function(authData) {
-      console.log('Logged in as:', authData.uid);
+    vm.user.signIn(provider).then(function() {
+      console.log('login Success!');
       vm.$window.history.back();
     }).catch(function(error) {
       console.log('Authentication failed:', error);
