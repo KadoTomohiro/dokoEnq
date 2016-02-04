@@ -2,7 +2,7 @@
   "name": "dokoEnq",
   "private": true,
   "dependencies": {
-    "bootstrap": "~4.0.0-alpha",
+    "bootstrap": "3.3.6",
     "angular": "~v1.5.0-beta.2",
     "angular-new-router": "~0.5.3",
     "angular-resource": "~v1.5.0-beta.2",

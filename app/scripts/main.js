@@ -23,7 +23,8 @@
       'dokoEnq.service.answer',
       'dokoEnq.service.store',
       'dokoEnq.service.onlinestatus',
-      'dokoEnq.service.firebase'
+      'dokoEnq.service.firebase',
+      'dokoEnq.service.auth'
     ])
     .controller('AppController', AppController);
 
