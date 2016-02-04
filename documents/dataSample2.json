@@ -1,16 +1,17 @@
 {
-  "users": { // user list
-    "user1": { // uid
-      "name": "KadoTomohiro", // userName
+  "users": {
+    "user1": {
+      "name": "KadoTomohiro",
       "enquetes": {
-        "enquete1": true,
+        "enquete1": true
       }
-    }, //  ...
+    }
   },
-  "templates": {　 // temolate list
-    "enquete1": { // enqueteId
+  "templates": {　
+    "enquete1": {
       "title": "セミナーについて",
-      "discription": "セミナーについてのご意見をお聞かせください"
+      "discription": "セミナーについてのご意見をお聞かせください",
+      "open": true,
       "groups": {
         "group1": {
           "discription": "受講者情報"
@@ -20,7 +21,7 @@
         }
       },
       "questions": {
-        "q1": { // question no
+        "q1": {
           "question": "氏名",
           "group": "group1",
           "type": "text",
@@ -33,7 +34,7 @@
           "type": "select",
           "format": "single",
           "items": ["JA", "アグリ", "モバイル", "IDC", "営業", "金融"],
-          "require": true,
+          "require": true
         },
         "q3": {
           "question": "セミナーに参加した目的を教えてください",
