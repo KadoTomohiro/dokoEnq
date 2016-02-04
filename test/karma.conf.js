@@ -45,6 +45,7 @@ module.exports = function(config) {
       'app/service/firebase/firebase.js',
       'app/service/onlinestatus/onlinestatus.js',
       'app/service/store/store.js',
+      'app/service/user/user.js',
       'test/components/about/about.spec.js',
       'test/components/complete/complete.spec.js',
       'test/components/confirm/confirm.spec.js',
@@ -61,6 +62,8 @@ module.exports = function(config) {
       'test/main.spec.js',
       'test/service/answer/answer.mock.js',
       'test/service/answer/answer.spec.js',
+      'test/service/auth/auth.mock.js',
+      'test/service/auth/auth.spec.js',
       'test/service/firebase/firebase.mock.js',
       'test/service/firebase/firebase.spec.js',
       'test/service/gruntfiles/gruntfiles.mock.js',
@@ -69,6 +72,8 @@ module.exports = function(config) {
       'test/service/onlinestatus/onlinestatus.spec.js',
       'test/service/store/store.mock.js',
       'test/service/store/store.spec.js',
+      'test/service/user/user.mock.js',
+      'test/service/user/user.spec.js',
       // endinjector
       'app/scripts/main.js',
       'test/main.spec.js'

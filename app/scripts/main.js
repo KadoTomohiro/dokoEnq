@@ -24,7 +24,7 @@
       'dokoEnq.service.store',
       'dokoEnq.service.onlinestatus',
       'dokoEnq.service.firebase',
-      'dokoEnq.service.auth'
+      'dokoEnq.service.user'
     ])
     .controller('AppController', AppController);
 
@@ -39,7 +39,7 @@
     {path: '/signin', component: 'signin'}
   ];
 
-  AppController.$inject = ['$rootScope', '$location', '$window', 'OnlineStatusService', 'firebaseService'];
+  AppController.$inject = ['$rootScope', '$location', '$window', 'OnlineStatusService', 'firebaseService', 'UserService'];
 
   /**
    * AppController
@@ -48,17 +48,19 @@
    * @main dokoEnq
    * @constructor
    */
-  function AppController ($rootScope, $location, $window, OnlineStatusService, firebaseService) {
+  function AppController ($rootScope, $location, $window, OnlineStatusService, firebaseService, UserService) {
     console.log('AppController construction');
     this.fb = firebaseService;
     this.$location = $location;
     this.onlineStatus = OnlineStatusService;
+    this.user = UserService;
     vm = this;
 
     // firebaseで認証されたら認証状態を保存する
     // localStrageへの保存を検討する
     this.fb.auth.$onAuth(function(authData) {
       vm.fb.authData = authData;
+      console.log(authData);
     });
 
     // オンライン状態
@@ -73,8 +75,9 @@
   }
 
   AppController.prototype.signOut = function () {
-     vm.fb.auth.$unauth();
-   };
+    console.log('AppController signOut action');
+    vm.user.signOut();
+  };
 
   var vm;
 })();
