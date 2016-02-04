@@ -27,9 +27,9 @@
         scope: 'email'
       }).then(function(authData) {
         userData = firebase.object.users[authData.uid];
-      }).then(function(authData){
+      }).then(function() {
         var authData = firebase.authData;
-        if(!userData) {
+        if (!userData) {
           firebase.object.users[authData.uid] = newUser(authData[provider].displayName);
           firebase.object.$save();
           userData = firebase.object.users[authData.uid];
@@ -46,7 +46,9 @@
     var userService = {
       signIn: signIn,
       signOut: signOut,
-      data: function() {return userData}
+      data: function() {
+        return userData;
+      }
     };
 
     return userService;
@@ -56,7 +58,7 @@
     return {
       name: name,
       enquetes: []
-    }
+    };
   }
 
 })();
