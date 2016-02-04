@@ -56,7 +56,7 @@
 
   function newUser(name) {
     if (!name) {
-      name = "unknouwn";
+      name = 'unknouwn';
     }
     return {
       name: name,

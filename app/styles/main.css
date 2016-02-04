@@ -166,3 +166,6 @@ a.signOutButton{
 li > a.signOutButton:hover{
   background-color:#ff6677;
 }
+.navbar{
+  background-color: #eeeeee;
+}
