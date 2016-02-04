@@ -24,7 +24,8 @@
       'dokoEnq.service.store',
       'dokoEnq.service.onlinestatus',
       'dokoEnq.service.firebase',
-      'dokoEnq.service.user'
+      'dokoEnq.service.user',
+      'dokoEnq.service.enquete'
     ])
     .controller('AppController', AppController);
 

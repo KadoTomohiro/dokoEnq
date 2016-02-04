@@ -10,7 +10,7 @@
     .module('dokoEnq.service.user', [])
     .factory('UserService', UserService);
 
-  UserService.$inject = ['firebaseService', '$firebaseObject'];
+  UserService.$inject = ['firebaseService'];
 
   /**
    * UserService
@@ -18,7 +18,7 @@
    * @class UserService
    * @constructor
    */
-  function UserService(firebase, $firebaseObject) {
+  function UserService(firebase) {
 
     var userData;
 
@@ -28,13 +28,15 @@
       }).then(function(authData) {
         userData = firebase.object.users[authData.uid];
       }).then(function() {
-        var authData = firebase.authData;
         if (!userData) {
-          firebase.object.users[authData.uid] = newUser(authData[provider].displayName);
+          var authData = firebase.authData;
+
+          userData = newUser(authData[provider].displayName)
+          firebase.object.users[authData.uid] = userData;
           firebase.object.$save();
-          userData = firebase.object.users[authData.uid];
-          console.log('new User:', userData.name);
+
         }
+        console.log(userData);
       });
     };
 
@@ -46,9 +48,7 @@
     var userService = {
       signIn: signIn,
       signOut: signOut,
-      data: function() {
-        return userData;
-      }
+      data: userData
     };
 
     return userService;
@@ -56,7 +56,7 @@
 
   function newUser(name) {
     if (!name) {
-      name = "unknouwn";
+      name = 'unknouwn';
     }
     return {
       name: name,

@@ -3,14 +3,17 @@
  *
  * @module dokoEnq.components.home
  */
-(function () {
+(function() {
   'use strict';
 
   angular
     .module('dokoEnq.components.home', [])
     .controller('HomeController', HomeController);
 
-  HomeController.$inject = [];
+  HomeController.$inject = [
+    'UserService',
+    'EnqueteService'
+  ];
 
   /**
    * HomeController
@@ -18,14 +21,13 @@
    * @class HomeController
    * @constructor
    */
-  function HomeController() {
+  function HomeController(UserService, EnqueteService) {
     console.log('HomeController Constructor');
 
-    this.titles = [
-      'セミナーについて',
-      'ハンズオンについて',
-      '新製品について'
-    ];
+    this.user = UserService;
+    this.enquete = EnqueteService;
+
+    vm = this;
 
   }
 
@@ -48,6 +50,13 @@
    */
   HomeController.prototype.activate = function() {
     console.log('HomeController activate Method');
+    // console.log(vm.user);
+    // if (vm.user.data.enquetes) {
+    //   angular.forEach(vm.user.data.enquetes, function(id) {
+    //     vm.enquetes.push(vm.enquete.getEnquete[id]);
+    //   });
+    // }
+
   };
 
   /**
@@ -70,5 +79,7 @@
   HomeController.prototype.deactivate = function() {
     console.log('HomeController deactivate Method');
   };
+
+  var vm;
 
 })();
