@@ -169,3 +169,6 @@ li > a.signOutButton:hover{
 .navbar{
   background-color: #eeeeee;
 }
+div > label {
+  padding-left: 2rem;
+}

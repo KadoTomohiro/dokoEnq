@@ -19,12 +19,14 @@
       'dokoEnq.components.complete',
       'dokoEnq.components.store',
       'dokoEnq.components.signin',
+      'dokoEnq.components.question',
       'dokoEnq.directive.enquetetitle',
       'dokoEnq.service.answer',
       'dokoEnq.service.store',
       'dokoEnq.service.onlinestatus',
       'dokoEnq.service.firebase',
-      'dokoEnq.service.user'
+      'dokoEnq.service.user',
+      'dokoEnq.service.question'
     ])
     .controller('AppController', AppController);
 
@@ -36,7 +38,8 @@
     {path: '/confirm', component: 'confirm'},
     {path: '/complete', component: 'complete'},
     {path: '/store', component: 'store'},
-    {path: '/signin', component: 'signin'}
+    {path: '/signin', component: 'signin'},
+    {path: '/question', component: 'question'}
   ];
 
   AppController.$inject = ['$rootScope', '$location', '$window', 'OnlineStatusService', 'firebaseService', 'UserService'];

@@ -1,1 +1,45 @@
-<div>question.html</div>
+<dokoenq-enquete-title></dokoenq-enquete-title>
+<div>
+  <pre>{{question.questionAll.enquetes.enquete1.questions|json}}</pre>
+</div>
+<div>
+  Q1:
+  {{question.questionAll.enquetes.enquete1.questions.q1.question}}
+  <input type="{{question.questionAll.enquetes.enquete1.questions.q1.type}}" name="" value="" ng-model="question.name" ng-required="{{question.questionAll.enquetes.enquete1.questions.q1.require}}">
+</div>
+<div>
+  Q2:
+  {{question.questionAll.enquetes.enquete1.questions.q2.question}}
+  <!-- <input type="{{question.questionAll.enquetes.enquete1.questions.q2.type}}" name="name" value=""> -->
+  <label ng-repeat="list in question.questionAll.enquetes.enquete1.questions.q2.items" for="list" ng-value="depName">
+    <input type="radio" name="name" ng-model="department" ng-value="depName">
+    {{list}}
+  </label>
+</div>
+<div>
+  Q3:
+  {{question.questionAll.enquetes.enquete1.questions.q3.question}}
+  <select multiple class="" name="" ng-model="purpose" ng-options="purpose for purpose in question.questionAll.enquetes.enquete1.questions.q3.items" ng-required="{{question.questionAll.enquetes.enquete1.questions.q3.require}}">
+  </select>
+</div>
+  Q4:
+  {{question.questionAll.enquetes.enquete1.questions.q4.question}}
+  <select class="" name="" ng-model="level" ng-options="purpose for purpose in question.questionAll.enquetes.enquete1.questions.q4.items" ng-required="{{question.questionAll.enquetes.enquete1.questions.q4.require}}">
+    
+  </select>
+<div>
+  <nav>
+    <ul class="pager">
+      <li class="previous">
+        <a href="/personal" class="my button blue">
+          <span aria-hidden="true">&larr;</span>
+          戻る</a>
+      </li>
+      <li class="next">
+        <a href="/confirm" ng-click="personal.temporarilyStored()" class="my button blue">進む
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
