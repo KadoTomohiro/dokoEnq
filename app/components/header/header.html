@@ -8,9 +8,11 @@
         <img class="online-status" src="images/online.png" alt="online" ng-if="dokoEnq.isOnline()"></img>
         <img class="online-status" src="images/offline.png" alt="offline" ng-if="!dokoEnq.isOnline()"></img>
       </li>
-      <li class="nav-item pull-right" ng-if="1"><a class="nav-link" href="store">Reseult</a></li>
+      <li class="nav-item pull-right" ng-if="1">
+        <a class="nav-link" href="store">Reseult</a>
+      </li>
       <li class="nav-item pull-right">
-        <a href="signin" class="btn btn-primary" ng-if="!dokoEnq.fb.authData">Sign In</a>
+        <a href="signin" class="signInButton" ng-if="!dokoEnq.fb.authData">Sign In</a>
         <button ng-click="dokoEnq.signOut()" class="btn btn-danger" ng-if="dokoEnq.fb.authData">Sign Out</button>
       </li>
       <!-- <li class="nav-item" ng-if="1" style="float:right;"><a class="nav-link" href="menu">MENU</a></li> -->

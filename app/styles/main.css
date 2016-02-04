@@ -74,70 +74,84 @@ img.online-status{
 	/*font-size:14px;*/
 	float:none;
 	text-align:center;
-	width:15rem;
+	/*width:20rem;*/
 	margin-right:1%;
 	margin-bottom:1%;
-	border-radius:3px;
+	border-radius:1px;
 	list-style:none;
   /*font-size: large;*/
 }
-#signInButton li.signInButton-github{
+#signInButton .signInButton-github{
 	background:#aaaaaa;
 	box-shadow:0 2px #888888;
 }
-#signInButton li.signInButton-github:hover{
+#signInButton .signInButton-github:hover{
 	background:#cccccc;
 }
-#signInButton li.signInButton-twitter{
+#signInButton .signInButton-twitter{
 	background:#55aaee;
 	box-shadow:0 2px #3388ee;
 }
-#signInButton li.signInButton-twitter:hover{
+#signInButton .signInButton-twitter:hover{
 	background:#77bbff;
 }
-#signInButton li.signInButton-facebook{
+#signInButton .signInButton-facebook{
 	background:#3355bb;
 	box-shadow:0 2px #334477;
 }
-#signInButton li.signInButton-facebook:hover{
+#signInButton .signInButton-facebook:hover{
 	background:#5577cc;
 }
-#signInButton li.signInButton-google{
+#signInButton .signInButton-google{
 	background:#ee5544;
 	box-shadow:0 2px #cc3322;
 }
-#signInButton li.signInButton-google:hover{
+#signInButton .signInButton-google:hover{
 	background:#ee7766;
 }
-#signInButton li.signInButton-hatena{
+#signInButton .signInButton-hatena{
 	background:#3388bb;
 	box-shadow:0 2px #335599;
 }
-#signInButton li.signInButton-hatena:hover{
+#signInButton .signInButton-hatena:hover{
 	background:#6699dd;
 }
-#signInButton li.signInButton-pocket{
+#signInButton .signInButton-pocket{
 	background:#ee3355;
 	box-shadow:0 2px #dd1122;
 }
-#signInButton li.signInButton-pocket:hover{
+#signInButton .signInButton-pocket:hover{
 	background:#ff5566;
 }
-#signInButton li.signInButton-line{
+#signInButton .signInButton-line{
 	background:#11cc11;
 	box-shadow:0 2px #009900;
 }
-#signInButton li.signInButton-line:hover{
+#signInButton .signInButton-line:hover{
 	background:#22dd22;
 }
-#signInButton a{
+#signInButton button{
 	display:block;
-	height:2.5rem;
+	height:4rem;
 	padding-top:0.5rem;
-	color:#ffffff;
+	/*color:#ffffff;*/
+  width:15rem;
+  border: 1px;
+  border-radius: 3px;
+  color: white;
 	text-decoration:none;
 }
-#signInButton a:hover{
+#signInButton button:hover{
 	text-decoration:none;
-	color:#ffffff;
+	/*color:#ffffff;*/
+}
+a.signInButton{
+	background:#3388bb;
+  color:white;
+}
+li > a.signInButton:hover{
+  background-color:#6699dd;
+}
+.large{
+  font-size: x-large;
 }
