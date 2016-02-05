@@ -1,11 +1,28 @@
-<div>送信済み<span class="badge">{{store.pushed.length}}</span></div>
-<ul class="list-group" >
-  <li class="list-group-item" ng-repeat="answered in store.pushed  track by $index">{{answered.name}}
-<!-- <button type="button" name="button" ng-click="store.pushed.$remove(answered)"></button> -->
-  </li>
-</ul>
-<div>未送信<span class="badge">{{store.unpushed.length}}</span><button type="button" name="button" ng-click="store.allPush()" class="btn btn-primary" ng-disabled="!store.isOnline()">送信する</button></div>
+<div>
+  回答
+  <span class="badge">{{store.pushed.length}}</span>
+  <span ng-if="store.unpushed.length">
+    （未送信
+    <span class="badge">{{store.unpushed.length}}
+    </span>
+    <button type="button" name="button" ng-click="store.allPush()" class="btn btn-primary" ng-disabled="!store.isOnline()">送信する</button>
 
-<ul class="list-group" >
-  <li class="list-group-item" ng-repeat="answer in store.unpushed track by $index">{{answer.name}}</li>
-</ul>
+  ）
+</span>
+  </div>
+  <!-- <ul class="list-group" >
+  <li class="list-group-item" ng-repeat="answered in store.pushed  track by $index">{{answered}} -->
+<!-- <button type="button" name="button" ng-click="store.pushed.$remove(answered)"></button> -->
+<!-- </li>
+</ul> -->
+<div>
+  <c3chart bindto-id="q2" chart-data="store.chartData.q2" chart-columns="store.chartColumns.q2">
+
+  </c3chart>
+
+  <c3chart bindto-id="dynamicpie" chart-data="store.piePoints" chart-columns="store.pieColumns"></c3chart>
+</div>
+
+<!-- <ul class="list-group" >
+  <li class="list-group-item" ng-repeat="answer in store.unpushed track by $index">{{answer}}</li>
+</ul> -->
