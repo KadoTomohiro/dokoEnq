@@ -7,10 +7,10 @@
   'use strict';
 
   angular
-    .module('dokoEnq.components.question', [])
+    .module('dokoEnq.components.question', ['ngResource'])
     .controller('QuestionController', QuestionController);
 
-  QuestionController.$inject = [];
+  QuestionController.$inject = ['questionService', '$resource', '$log'];
 
   /**
    * QuestionController
@@ -18,7 +18,8 @@
    * @class QuestionController
    * @constructor
    */
-  function QuestionController() {
+  function QuestionController(questionService) {
+    vm = this;
     console.log('QuestionController Constructor');
   }
 
@@ -39,9 +40,14 @@
    *
    * @method activate
    */
-  QuestionController.prototype.activate = function() {
+  QuestionController.prototype.activate = function(questionService, $resource, $log) {
     console.log('QuestionController activate Method');
     vm = this;
+    vm.questionService = questionService;
+    // vm.questions = vm.questionAll.enquetes.enquete1.questions;
+    $log.debug('questionsController');
+    $log.debug(vm.questionAll);
+    // $log.debug(vm.questions);
   };
 
   /**

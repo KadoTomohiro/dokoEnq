@@ -13,7 +13,7 @@
       </li>
       <li class="nav-item pull-right">
         <a href="signin" class="signInButton" ng-if="!dokoEnq.fb.authData">Sign In</a>
-        <button ng-click="dokoEnq.signOut()" class="btn btn-danger" ng-if="dokoEnq.fb.authData">Sign Out</button>
+        <a ng-click="dokoEnq.signOut()" class="signOutButton" ng-if="dokoEnq.fb.authData">Sign Out</a>
       </li>
       <!-- <li class="nav-item" ng-if="1" style="float:right;"><a class="nav-link" href="menu">MENU</a></li> -->
       <!-- <li class="nav-item"><a class="nav-link" ng-link="home">Home</a></li>

@@ -6,3 +6,4 @@ docs
 report
 npm-debug.log
 .DS_Store
+.grunt

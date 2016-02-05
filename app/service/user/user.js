@@ -31,7 +31,7 @@
         if (!userData) {
           var authData = firebase.authData;
 
-          userData = newUser(authData[provider].displayName)
+          userData = newUser(authData[provider].displayName);
           firebase.object.users[authData.uid] = userData;
           firebase.object.$save();
 

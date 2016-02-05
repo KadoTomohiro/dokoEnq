@@ -35,7 +35,7 @@
           "question": "所属",
           "type": "select",
           "format": "single",
-          "items": ["JA", "アグリ", "モバイル", "IDC", "営業", "金融"],
+          "items": ["JA", "アグリ", "モバイル", "IDC", "営業", "金融", "Sビジ"],
           "require": true
         },
         "q3": {

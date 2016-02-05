@@ -45,6 +45,7 @@ module.exports = function(config) {
       'app/service/enquete/enquete.js',
       'app/service/firebase/firebase.js',
       'app/service/onlinestatus/onlinestatus.js',
+      'app/service/question/question.js',
       'app/service/store/store.js',
       'app/service/user/user.js',
       'test/components/about/about.spec.js',

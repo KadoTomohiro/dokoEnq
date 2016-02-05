@@ -148,10 +148,27 @@ img.online-status{
 a.signInButton{
 	background:#3388bb;
   color:white;
+  width: 10rem;
+  text-align: center;
 }
 li > a.signInButton:hover{
   background-color:#6699dd;
 }
 .large{
   font-size: x-large;
+}
+a.signOutButton{
+  background:#dd3344;
+  color: white;
+  width: 10rem;
+  text-align: center;
+}
+li > a.signOutButton:hover{
+  background-color:#ff6677;
+}
+.navbar{
+  background-color: #eeeeee;
+}
+div > label {
+  padding-left: 2rem;
 }
