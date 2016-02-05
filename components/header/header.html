@@ -2,17 +2,18 @@
   <div class="">
     <a class="navbar-brand" href="/">どこでもアンケート</a>
   </div>
-
-  <nav class="navbar-toggleable-xs collapse" id="app-nav" aria-expanded="false" style="height: 0px;">
+   <nav id="app-nav" aria-expanded="false" style="height: 0px;"> <!--class="navbar-toggleable-xs collapse"  -->
     <ul class="nav navbar-nav row pull-right">
       <li class="nav-item">
         <img class="online-status" src="images/online.png" alt="online" ng-if="dokoEnq.isOnline()"></img>
         <img class="online-status" src="images/offline.png" alt="offline" ng-if="!dokoEnq.isOnline()"></img>
       </li>
-      <li class="nav-item pull-right" ng-if="1"><a class="nav-link" href="store">Reseult</a></li>
+      <li class="nav-item pull-right" ng-if="1">
+        <a class="nav-link" href="store">Reseult</a>
+      </li>
       <li class="nav-item pull-right">
-        <a href="signin" class="btn btn-primary" ng-if="!dokoEnq.fb.authData">Sign In</a>
-        <button ng-click="dokoEnq.signOut()" class="btn btn-danger" ng-if="dokoEnq.fb.authData">Sign Out</button>
+        <a href="signin" class="signInButton" ng-if="!dokoEnq.fb.authData">Sign In</a>
+        <a ng-click="dokoEnq.signOut()" class="signOutButton" ng-if="dokoEnq.fb.authData">Sign Out</a>
       </li>
       <!-- <li class="nav-item" ng-if="1" style="float:right;"><a class="nav-link" href="menu">MENU</a></li> -->
       <!-- <li class="nav-item"><a class="nav-link" ng-link="home">Home</a></li>

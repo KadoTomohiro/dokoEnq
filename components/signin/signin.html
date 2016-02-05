@@ -1,1 +1,41 @@
-<button class="btn btn-primary" ng-click="signin.signin('github')">Sign In by GitHub</button>
+<!-- <button class="btn btn-primary" ng-click="signin.signin('google')">Sign In by GitHub</button> -->
+<div class="large">
+  sign in with
+</div>
+<!-- ボタンのセット -->
+<div id="signInButton">
+  <ul>
+    <!-- GitHub -->
+    <li>
+      <button class="signInButton-github" ng-click="signin.signin('github')">GitHub</button>
+    </li>
+    <!-- Twitter -->
+    <li>
+      <button class="signInButton-twitter" ng-click="signin.signin('twitter')">Twitter</button>
+    </li>
+    <!-- Facebook -->
+    <li>
+      <button class="signInButton-facebook" ng-click="signin.signin('facebook')">Facebook</button>
+    </li>
+    <!-- Google+ -->
+    <li>
+      <button class="signInButton-google" ng-click="signin.signin('google')">Google+</button>
+    </li>
+  </ul>
+</div>
+<!-- <script>
+  (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/client:plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+   
+  function signinCallback(authResult) {
+    if (authResult['access_token']) {
+      // 認証OK時のアクション
+      document.getElementById('signinButton').setAttribute('style', 'display: none');
+    } else if (authResult['error']) {
+      // エラー発生時のアクション
+    }
+  }
+</script> -->
