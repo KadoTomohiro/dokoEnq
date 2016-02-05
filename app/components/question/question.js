@@ -45,7 +45,7 @@
     vm = this;
     vm.questionService = questionService;
     // vm.question =  vm.questionService.get();
-    vm.questionService.get("enquete1")
+    vm.questionService.get('enquete1')
       .then(function(questionObj) {
         vm.question = questionObj;
         $log.debug('then');
