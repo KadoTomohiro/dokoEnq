@@ -32,11 +32,11 @@
       return temp[key];
     };
 
-    var store = function () {
+    var store = function (key) {
       console.log('answerService store Methos');
-      StoreService.store(temp.personal);
+      StoreService.store(temp[key]);
 
-      temp = {};
+      temp[key] = {};
     };
 
     var answerService = {

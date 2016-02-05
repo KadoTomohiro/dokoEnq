@@ -27,29 +27,31 @@
         scope: 'email'
       }).then(function(authData) {
         userData = firebase.object.users[authData.uid];
-      }).then(function() {
+        return authData;
+      }).then(function(authData) {
         if (!userData) {
-          var authData = firebase.authData;
-
           userData = newUser(authData[provider].displayName);
           firebase.object.users[authData.uid] = userData;
           firebase.object.$save();
-
         }
-
-        console.log(userData);
       });
     };
 
     var signOut = function() {
       firebase.auth.$unauth();
+      userData = {};
+    };
+
+    var setUser = function () {
+
     };
 
     // var getUser = function ()
     var userService = {
       signIn: signIn,
       signOut: signOut,
-      data: userData
+      data: userData,
+      setUser: setUser
     };
 
     return userService;

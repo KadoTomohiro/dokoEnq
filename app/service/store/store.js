@@ -10,7 +10,7 @@
     .module('dokoEnq.service.store', [])
     .factory('StoreService', StoreService);
 
-  StoreService.$inject = ['$localStorage', 'OnlineStatusService'];
+  StoreService.$inject = ['$localStorage', 'OnlineStatusService', 'firebaseService'];
 
   /**
    * StoreService
@@ -44,11 +44,11 @@
       $localStorage.answers = angular.toJson(answers);
     };
 
-    var pushServer = function(answer) {
+    var pushServer = function(answer, enqueteId) {
       console.log('push fire base');
-      var ref = new Firebase('https://dokoenq.firebaseio.com');
+      var ref = new Firebase('https://dokoenq.firebaseio.com/answes');
       console.log(ref);
-      ref.child('answers').push(answer, function(error) {
+      ref.child(enqueteId).push(answer, function(error) {
         if (angular.isObject(error)) {
           return false;
         }

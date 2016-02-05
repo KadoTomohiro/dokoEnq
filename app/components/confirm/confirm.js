@@ -43,7 +43,7 @@
   ConfirmController.prototype.activate = function() {
     console.log('ConfirmController activate Method');
     vm = this;
-    this.tempAnswer = vm.AnswerService.tempRestore('personal');
+    this.tempAnswer = vm.AnswerService.tempRestore('enquete1');
     console.log(this.tempAnswer);
   };
 
@@ -78,7 +78,7 @@
     console.log('ConfilmController store Method');
     vm = this;
 
-    vm.AnswerService.store();
+    vm.AnswerService.store('enquete1');
   };
   /**
    * Angular ViewModel
