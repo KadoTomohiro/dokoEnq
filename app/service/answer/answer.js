@@ -33,8 +33,8 @@
     };
 
     var store = function (key) {
-      console.log('answerService store Methos');
-      StoreService.store(temp[key]);
+      console.log('answerService store Methos', key);
+      StoreService.store(temp[key], key);
 
       temp[key] = {};
     };

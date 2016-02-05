@@ -20,10 +20,10 @@
    */
   function StoreService($localStorage, OnlineStatusService) {
 
-    var store = function(answer) {
+    var store = function(answer, id) {
       if (OnlineStatusService.isOnline) {
         console.log('online!');
-        pushServer(answer);
+        pushServer(answer, id);
       } else {
         console.log('offline!');
         localStore(answer);
@@ -45,8 +45,8 @@
     };
 
     var pushServer = function(answer, enqueteId) {
-      console.log('push fire base');
-      var ref = new Firebase('https://dokoenq.firebaseio.com/answes');
+      console.log('push fire base', enqueteId, answer);
+      var ref = new Firebase('https://dokoenq.firebaseio.com/answers');
       console.log(ref);
       ref.child(enqueteId).push(answer, function(error) {
         if (angular.isObject(error)) {

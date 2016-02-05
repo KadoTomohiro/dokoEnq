@@ -4,7 +4,13 @@
 <div>
   <ul>
     <li ng-repeat="(no, q) in confirm.questions">
-      {{no | uppercase}}{{q.question}}：{{confirm.tempAnswer[no]}}
+      <dt>
+        {{no | uppercase}} {{q.question}}
+      </dt>
+      <dd>
+        A {{q.type == 'select' ? q.items[confirm.tempAnswer[no]] : confirm.tempAnswer[no]}}
+      </dd>
+
     </li>
   </ul>
 </div>
