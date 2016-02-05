@@ -3,14 +3,14 @@
  *
  * @module dokoEnq.components.question
  */
-(function () {
+(function() {
   'use strict';
 
   angular
     .module('dokoEnq.components.question', ['ngResource'])
     .controller('QuestionController', QuestionController);
 
-  QuestionController.$inject = ['questionService', '$resource', '$log'];
+  QuestionController.$inject = ['questionService', '$resource', '$log', '$rootScope', 'AnswerService'];
 
   /**
    * QuestionController
@@ -40,17 +40,38 @@
    *
    * @method activate
    */
-  QuestionController.prototype.activate = function(questionService, $resource, $log) {
+  QuestionController.prototype.activate = function(questionService, $resource, $log, $rootScope, AnswerService) {
     console.log('QuestionController activate Method');
     vm = this;
     vm.questionService = questionService;
+    vm.AnswerService = AnswerService;
+
+    vm.question = vm.questionService.get('enquete1');
+    vm.answer = {};
+    angular.forEach(vm.question.questions, function(val, key) {
+      vm.answer[key] = undefined;
+    });
     // vm.question =  vm.questionService.get();
-    vm.questionService.get('enquete1')
-      .then(function(questionObj) {
-        vm.question = questionObj;
-        $log.debug('then');
-        $log.debug(vm.question);
-      });
+
+    //
+    // vm.questionService.get("enquete1")
+    //   .then(function(questionObj) {
+    //     vm.question = questionObj;
+    //     $log.debug('then');
+    //     $log.debug(vm.question);
+    //
+    //     vm.answer = {};
+    //     angular.forEach(vm.question.questions, function(val, key) {
+    //       vm.answer[key] = undefined;
+    //     });
+    //   });
+    //
+    // $rootScope.$watch(function() {return vm.question} ,function () {
+    //   console.log('setQuestion', vm.question);
+    //   vm.question = vm.question;
+    // })
+    vm.hoge = 'fuga';
+
     // vm.questions = vm.questionAll.enquetes.enquete1.questions;
     $log.debug('questionsController');
     $log.debug(vm.question);
@@ -79,6 +100,12 @@
     vm = this;
   };
 
+  QuestionController.prototype.temporarilyStored = function() {
+    console.log('QuestionController temporarilyStored Method');
+    vm = this;
+
+    vm.AnswerService.tempStore('enquete1', vm.answer);
+  };
   /**
    * Angular ViewModel
    *

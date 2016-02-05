@@ -3,14 +3,14 @@
  *
  * @module dokoEnq.components.confirm
  */
-(function () {
+(function() {
   'use strict';
 
   angular
     .module('dokoEnq.components.confirm', [])
     .controller('ConfirmController', ConfirmController);
 
-  ConfirmController.$inject = ['AnswerService'];
+  ConfirmController.$inject = ['AnswerService', 'questionService'];
 
   /**
    * ConfirmController
@@ -18,9 +18,10 @@
    * @class ConfirmController
    * @constructor
    */
-  function ConfirmController(AnswerService) {
+  function ConfirmController(AnswerService, questionService) {
     console.log('ConfirmController Constructor');
     this.AnswerService = AnswerService;
+    this.questionService = questionService;
   }
 
   /**
@@ -43,8 +44,11 @@
   ConfirmController.prototype.activate = function() {
     console.log('ConfirmController activate Method');
     vm = this;
-    this.tempAnswer = vm.AnswerService.tempRestore('personal');
-    console.log(this.tempAnswer);
+    this.tempAnswer = vm.AnswerService.tempRestore('enquete1');
+    vm.questions = vm.questionService.get('enquete1').questions;
+    // .then(function(questionObj) {
+    //   vm.questions = questionObj.questions;
+    // });
   };
 
   /**
@@ -74,11 +78,11 @@
   //   var tempAnswer = vm.AnswerService.tempRestore('personal');
   //   console.log(tempAnswer);
   // };
-  ConfirmController.prototype.store = function () {
+  ConfirmController.prototype.store = function() {
     console.log('ConfilmController store Method');
     vm = this;
 
-    vm.AnswerService.store();
+    vm.AnswerService.store('enquete1');
   };
   /**
    * Angular ViewModel
