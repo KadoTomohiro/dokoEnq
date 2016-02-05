@@ -24,15 +24,17 @@
 
 </form>
 {{myForm.$valid}}
+
+</div>
 <nav>
   <ul class="pager">
     <li class="previous">
-      <a href="/description" ng-click="question.temporarilyStored()" class="my button blue">
+      <a href="/description" ng-click="question.temporarilyStored()">
         <span aria-hidden="true">&larr;</span>
         戻る</a>
     </li>
     <li class="next" ng-disabled="true">
-      <a href="/confirm" ng-click="question.temporarilyStored()" class="my button blue">進む
+      <a href="/confirm" ng-click="question.temporarilyStored()">進む
         <span aria-hidden="true">&rarr;</span>
       </a>
     </li>
