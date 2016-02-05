@@ -4,13 +4,17 @@
     .module('dokoEnq.service.question', ['ngResource'])
     .service('questionService', questionService);
 
-  questionService.$inject = ['$http', '$log', '$resource'];
+  questionService.$inject = ['$log', '$resource'];
 
-  function questionService($http, $log, $resource) {
-    var get = function() {
-      var questions = $resource('dataSample2.json').get();
-      $log.debug(questions);
-      return questions;
+  function questionService($log, $resource) {
+    var get = function(enqueteId) {
+      var question = $resource('dataSample2.json').get().$promise
+        .then(function(questionJson) {
+          $log.debug('get');
+          $log.debug(questionJson);
+          return angular.fromJson(questionJson).enquetes[enqueteId];
+        });
+      return question;
     };
     var method = {
       get : get

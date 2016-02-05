@@ -44,10 +44,16 @@
     console.log('QuestionController activate Method');
     vm = this;
     vm.questionService = questionService;
-    vm.questionAll =  vm.questionService.get();
+    // vm.question =  vm.questionService.get();
+    vm.questionService.get("enquete1")
+      .then(function(questionObj) {
+        vm.question = questionObj;
+        $log.debug('then');
+        $log.debug(vm.question);
+      });
     // vm.questions = vm.questionAll.enquetes.enquete1.questions;
     $log.debug('questionsController');
-    $log.debug(vm.questionAll);
+    $log.debug(vm.question);
     // $log.debug(vm.questions);
   };
 
