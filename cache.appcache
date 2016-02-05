@@ -1,9 +1,12 @@
 CACHE MANIFEST
-# rev 1 - 2016-02-05T07:39:28.326Z
+# rev 1 - 2016-02-05T07:42:03.945Z
 
 CACHE:
 images/offline.png
 images/online.png
+scripts/main.b3c7631b.js
+scripts/plugins.d41d8cd9.js
+scripts/vendor.0dc18363.js
 styles/main.d54efeb3.css
 styles/vendor.d4142862.css
 components/about/about.html
