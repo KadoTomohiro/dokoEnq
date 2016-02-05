@@ -11,6 +11,7 @@
       'ngNewRouter',
       'ngStorage',
       'firebase',
+      'gridshore.c3js.chart',
       'dokoEnq.config',
       'dokoEnq.components.home',
       'dokoEnq.components.description',

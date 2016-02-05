@@ -10,7 +10,9 @@
     .module('dokoEnq.components.description', [])
     .controller('DescriptionController', DescriptionController);
 
-  DescriptionController.$inject = [];
+  DescriptionController.$inject = [
+    'questionService'
+  ];
 
   /**
    * DescriptionController
@@ -18,8 +20,10 @@
    * @class DescriptionController
    * @constructor
    */
-  function DescriptionController() {
+  function DescriptionController(questionService) {
     console.log('DescriptionController Constructor');
+
+    this.questionService = questionService;
   }
 
   /**
@@ -42,6 +46,8 @@
   DescriptionController.prototype.activate = function() {
     console.log('DescriptionController activate Method');
     vm = this;
+
+    this.question = vm.questionService.get();
   };
 
   /**

@@ -25,6 +25,9 @@ module.exports = function(config) {
       'bower_components/ngstorage/ngStorage.js',
       'bower_components/firebase/firebase.js',
       'bower_components/angularfire/dist/angularfire.js',
+      'bower_components/d3/d3.js',
+      'bower_components/c3/c3.js',
+      'bower_components/c3-angular/c3-angular.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       // injector:js

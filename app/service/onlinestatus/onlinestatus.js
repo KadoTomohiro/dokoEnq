@@ -31,6 +31,7 @@
     var setStatus = function() {
       onlineStatus.onLine = $window.navigator.onLine;
       console.log(onlineStatus.onLine ? 'online' : 'offline', 'now!');
+
       $rootScope.$digest();
     };
 

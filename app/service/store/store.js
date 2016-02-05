@@ -10,7 +10,7 @@
     .module('dokoEnq.service.store', [])
     .factory('StoreService', StoreService);
 
-  StoreService.$inject = ['$localStorage', 'OnlineStatusService', 'firebaseService'];
+  StoreService.$inject = ['$localStorage', 'OnlineStatusService', '$window'];
 
   /**
    * StoreService
@@ -18,10 +18,11 @@
    * @class StoreService
    * @constructor
    */
-  function StoreService($localStorage, OnlineStatusService) {
+  function StoreService($localStorage, OnlineStatusService, $window) {
 
     var store = function(answer, id) {
-      if (OnlineStatusService.isOnline) {
+      console.log(OnlineStatusService.isOnline());
+      if (OnlineStatusService.isOnline()) {
         console.log('online!');
         pushServer(answer, id);
       } else {
@@ -63,7 +64,7 @@
       console.log(answers);
       angular.forEach(answers, function(answer) {
         console.log(answer);
-        pushServer(answer);
+        pushServer(answer, 'enquete1');
       });
 
       $localStorage.answers = undefined;
@@ -72,6 +73,8 @@
     var getLocalAnsewrs = function() {
       return angular.fromJson($localStorage.answers);
     };
+
+    // $window.addEventListener('online',allPush, true);
 
     var storeService = {
       store: store,
