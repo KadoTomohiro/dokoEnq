@@ -52,6 +52,7 @@
       vm.answer[key] = undefined;
     });
     // vm.question =  vm.questionService.get();
+
     //
     // vm.questionService.get("enquete1")
     //   .then(function(questionObj) {
@@ -70,6 +71,7 @@
     //   vm.question = vm.question;
     // })
     vm.hoge = 'fuga';
+
     // vm.questions = vm.questionAll.enquetes.enquete1.questions;
     $log.debug('questionsController');
     $log.debug(vm.question);
