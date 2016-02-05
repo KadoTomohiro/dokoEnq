@@ -10,20 +10,23 @@
       {{no | uppercase}}:{{q.question}}
     </p>
     <!-- テキスト入力 -->
-    <div ng-if="q.type == 'text'">
-      <input type="text" name="{{no}}" ng-model="question.answer[no]" ng-required="{{q.require}}">
+    <div class="form-group">
+      <div ng-if="q.type == 'text'">
+        <input type="text" name="{{no}}" ng-model="question.answer[no]" ng-required="{{q.require}}" class="form-control">
+      </div>
     </div>
     <!-- ラジオボタン -->
+    
     <div ng-if="q.format='single'">
-      <span class="label label-default"  ng-repeat="item in q.items">
+      <h3><label class="label label-primary" ng-repeat="item in q.items">
         <input type="radio" name="{{no}}" ng-model="question.answer[no]" value="{{$index}}" ng-required="{{q.require}}">
         {{item}}
-      </span>
+      </label></h3>
     </div>
+    <br>
   </div>
 
 </form>
-{{myForm.$valid}}
 
 </div>
 <nav>
